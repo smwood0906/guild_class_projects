@@ -27,5 +27,14 @@ class Players:
 player1 = Players(input('What is the name of Player 1?: '))
 player2 = Players(input('What is the name of Player 2?: '))
 
-player1.roll()
-player2.roll()
+while player1.score <= 20 and player2.score <= 20:
+    input('{p1} it\'s your turn! Press Enter to roll: '.format(p1 = player1.name))
+    player1.roll()
+    if player1.score >= 20:
+        print('Congratulations {p1}, you win!'.format(p1 = player1.name))
+        exit()
+    input('{p2} it\'s your turn! Press Enter to roll: '.format(p2 = player2.name))
+    player2.roll()
+    if player2.score >= 20:
+        print('Congratulations {p2}, you win!'.format(p2 = player2.name))
+        exit()
