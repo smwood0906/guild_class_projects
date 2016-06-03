@@ -54,7 +54,7 @@ class Die():
 
     def roll(self):
         if self.hold == True:
-            pass
+            print(self.art)
         else:
             self.value = random.randint(1,6)
             self.art = self.asci_die[self.value]
@@ -67,29 +67,61 @@ class Players:
             self.name = name
             self.die1 = Die()
             self.die2 = Die()
+            self.phase = 1
 
-        def round1(self):
-            print(self.name +' Die A rolled a: ')
+        def round(self):
+            print(self.name +', Die A rolled a: ')
             self.die1.roll()
             print(' and Die B rolled a: ')
             self.die2.roll()
-            if self.die1.value == 3 and self.die2.value == 3:
-                print('Your dice are so angry! Back to Round 1! ')
-            elif self.die1.value + self.die2.value == 3:
-                return self.round2()
-            else:
+            advance = self.check_win()
+
+            if advance == False:
                 choice = input('Would you like to hold the value of Die A or B? (enter A, B, or hit enter to continue without holding any die)')
+
                 if choice.upper() == 'A':
-                    self.die1.hold = True
+                    if self.die1.value != 6:
+                        self.die1.hold = True
+                    else:
+                        print('Sorry, you cannot hold a 6.')
+
                 elif choice.upper() == 'B':
-                    self.die2.hold = True
+                    if self.die2.value != 6:
+                        self.die2.hold = True
+                    else:
+                        print('Sorry, you cannot hold a 6.')
 
 
+        def check_win(self):
+            if self.die1.value == 3 and self.die2.value == 3:
+                print('Your dice are so angry! Back to phase 1! ')
+                self.phase = 1
 
-        def round2(self):
-            print('round2')
-# print('You rolled a {a} and a {b}!'.format(a = dice1, b = dice2))
+            elif self.phase == 1 and self.die1.value + self.die2.value == 3:
+                print(self.name + ' you\'re in Phase 2!')
+                self.phase = 2
+                self.die1.hold = False
+                self.die2.hold = False
+                return True
 
-player1 = Players(input('What is the name of Player 1?: '))
-# player2 = Players(input('What is the name of Player 2?: '))
-player1.round1()
+            elif self.phase == 2 and self.die1.value + self.die2.value == 7:
+                print(self.name + ' you\'re in Phase 3!')
+                self.phase = 3
+                self.die1.hold = False
+                self.die2.hold = False
+                return True
+
+            elif self.phase == 3 and self.die1.value + self.die2.value == 11:
+                print(self.name + ' you win!')
+                quit()
+            return False
+
+pl_lst = []
+player1 = Players(input('What is the name of Player 1?: ').capitalize())
+player2 = Players(input('What is the name of Player 2?: ').capitalize())
+pl_lst.append(player1)
+pl_lst.append(player2)
+
+while True:
+    for pl in pl_lst:
+        pl.round()
