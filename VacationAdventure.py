@@ -19,8 +19,8 @@ def process_user_movement(description, doors):
 
     print('You could try '+ ', '.join(options[0:-1]) + ' or ' + options[-1] + '.')
     while True:
-        choice = input('Which adventure would you like to take? : ')
-        if choice.lower() in options:
+        choice = input('Which adventure would you like to take? : ').capitalize()
+        if choice in options:
             return doors[choice]
         else:
             print('I didn\'t understand that, please try again.')
@@ -34,7 +34,7 @@ def room0():
      and reasonably priced, this carpet is making you dizzy.\
      \
      There are three flights leaving soon that you\'ve got time to catch.'''
-    doors = {'vegas': room6, 'cabo': room1, 'amsterdam': room2}
+    doors = {'Vegas': room6, 'Cabo': room1, 'Amsterdam': room2}
 
     return process_user_movement(description, doors)
 
@@ -48,7 +48,7 @@ def room1():
 
     You could call the airline and change your flight, or keep your ticket home.'''
 
-    doors = {'apartment': room7, 'home': room0}
+    doors = {'Apartment': room7, 'Home': room0}
     return process_user_movement(description, doors)
 
 def room2():
@@ -60,7 +60,7 @@ def room2():
     \
     There is a bus headed South that you can afford, you can take that stranger up on their offer for a place to crash for the night,\
     or you can call your Mom and beg for a flight home.'''
-    doors = {'bus': room3, 'mom': room0, 'stranger': room8}
+    doors = {'Bus': room3, 'Mom': room0, 'Stranger': room8}
     return process_user_movement(description, doors)
 
 def room3():
@@ -72,7 +72,7 @@ def room3():
     You\'ve also been dying to take the Chunnel (underwater train) to London.\
     You\'re also tempted to join some new friends from the hostel on a ski trip to Switzerland.'''
 
-    doors = {'flight': room6, 'chunnel': room4, 'skiing': room5}
+    doors = {'Flight': room6, 'Chunnel': room4, 'Skiing': room5}
     return process_user_movement(description, doors)
 
 def room4():
@@ -81,14 +81,14 @@ def room4():
         \
         Maybe if you\'re lucky she can help you get back some identification and funding and send you on to your next desination!\
         Do you want to meet the Queen, or take your chances with the embassy?'''
-        doors = {'queen': room3, 'embassy': room0}
+        doors = {'Queen': room3, 'Embassy': room0}
         return process_user_movement(description, doors)
 
 def room5():
     description = '''Switzerland! What an incredible three days of skiing in the Swiss Alps! It snowed every day making the powder something you\'d\
     only ever dreamed about! Unfortunately, all that snow has closed down most transportation options and it looks like you\'re\
     either going to have to go back the way you came or hitch a ride with that ski racing team on their bus.'''
-    doors = {'backtrack': room3, 'bus': room2}
+    doors = {'Backtrack': room3, 'Bus': room2}
     return process_user_movement(description, doors)
 
 def room6():
@@ -100,7 +100,7 @@ def room6():
     Do you want to quit while you\'re ahead and go home? Or, maybe take that expensively dressed gentleman up on his offer\
     to discuss a business proposition in his suite? Shoot, you could also just buy a private jet with your winnings\
     and fly anywhere you want! '''
-    doors = {'home': room0, 'business': room8, 'jet': room7}
+    doors = {'Home': room0, 'Business': room8, 'Jet': room7}
     return process_user_movement(description, doors)
 
 def room7():
@@ -113,7 +113,7 @@ def room7():
     There\'s also this guilt that\'s been building, maybe you should learn something historical on your next trip?.\
     Then again, some rowdy American nightlife might be a nice way to mix things up.'''
 
-    doors = {'beach': room1, 'usa': room6, 'kayak': room9, 'history': room10}
+    doors = {'Beach': room1, 'Usa': room6, 'Kayak': room9, 'History': room10}
 
     return process_user_movement(description, doors)
 
