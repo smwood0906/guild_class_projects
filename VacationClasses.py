@@ -18,6 +18,8 @@ class Player():
         if self.location.title == 'exit':
             exit()
         else:
+            self.random_reset()
+            print('-'*40)
             print(self.location.title)
             if self.location.visited == False:
                 self.stamping()
@@ -25,6 +27,7 @@ class Player():
                 self.first_class_check()
             elif self.location.visited == True:
                 print('You have been here before! No passport stamp this time!')
+            print('-' *40)
             print(self.location.description)
             self.location.visited = True
             options = list(self.location.gates.keys())
@@ -53,6 +56,15 @@ class Player():
     def display_stamps(self):
         print("Passport stamp message: " + self.passport.stamp_list[self.location.title])
         print("Number of stamps in your passport: " + str(self.passport.total_stamps))
+
+    def random_reset(self):
+        n = random.randint(0,15)
+        if n == 7 or n == 13:
+            print('''Oh no! Due to some misunderstanding with the local authorities you\'ve\
+            been sent home! Keep going to search for the final destination, or work toward your\
+            First Class status. ''')
+            self.location = location1
+
 
 class Passport():
     def __init__(self):
@@ -137,13 +149,12 @@ Illulissat ice-fjord.\
 All these chilly endeavors are making you long for those sweet Icelandic hot pools though.\
 One more dip in the springs, or take a chance with your travel app again?''', {}, 'The unicorns of the sea!')
 
-location11 = Location('Egypt', '''Egypt! This has to be the final destination on your vacation adventure\
+location11 = Location('Egypt', '''Egypt! This has to be the Final Destination on your vacation adventure\
  because you are running dangerously low on funds!\
  \
- But you aren\'t heading home without playing tourist at the Great Pyramids, the Sphinx, and\
- the Valley of the Kings.\
-
- You can head to the travel agency and head home, or, if you are still searching for First Class status,\
+ But first, you play tourist at the Great Pyramids, the Sphinx, and the Valley of the Kings.\
+\
+ You can head to the travel agency to finish your adventure, or, if you are still trying for for First Class status,\
   you could try to keep going on the cheap and go with this slightly\
   shady looking fellow who is offering to take you to King Tut's tomb for free.''', {}, 'This stamp is a curse!')
 
@@ -163,8 +174,11 @@ location10.gates = {'Springs': location8, 'Chance': location11}
 location11.gates = {'Tomb': location7, 'Agency': location12}
 
 player1 = Player('Sarah', location1)
-
-
+import random
+print('''Welcome to your Vacation Adventure!\
+Make choices to travel to different destinations and gather passport stamps\
+along the way. You must find the Final Destination to finish the game.\
+Try to avoid getting sent home to Portland to restart your adventure.\
+Get at least 8 different passport stamps to acheive First Class status for life!''')
 while True:
     player1.engine()
-    print()
