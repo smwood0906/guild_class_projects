@@ -60,8 +60,8 @@ class Player():
     def random_reset(self):
         n = random.randint(0,15)
         if n == 7 or n == 13:
-            print('''Oh no! Due to some misunderstanding with the local authorities you\'ve\
-            been sent home! Keep going to search for the final destination, or work toward your\
+            print('''Oh no! Due to some misunderstanding with the local authorities you\'ve\n\
+            been sent home! Keep going to search for the final destination, or work toward your\n\
             First Class status. ''')
             self.location = location1
 
@@ -72,90 +72,90 @@ class Passport():
         self.stamp_list = {}
 
 # create all locations
-location1 = Location('Portland', '''Looks like you\'re at the Portland airport. While the food here is delicious,\
+location1 = Location('Portland', '''Looks like you\'re at the Portland airport. While the food here is delicious,\n\
  and reasonably priced, this carpet is making you dizzy.\
- \
+ \n\
  There are three flights leaving soon that you\'ve got time to catch.''', {}, 'Is there gluten in that?')
 
-location2 = Location('Cabo', '''Viva Mexico!  You spend a few days relaxing on Medano beach, sipping 2 for 1 margaritas\
-and getting a tan. You head up to Todos Santos for a day and visit the Hotel California, then come back for\
-an evening water taxi to Lover's Beach.\
+location2 = Location('Cabo', '''Viva Mexico!  You spend a few days relaxing on Medano beach, sipping 2 for 1 margaritas\n\
+and getting a tan. You head up to Todos Santos for a day and visit the Hotel California, then come back for\n\
+an evening water taxi to Lover's Beach.\n\
 
-You\'re starting to feel a little dehydrated and worn out from all the heat. A couple you met at Cabo Wabo offered you\
-their hometown apartment as a place to stay while they finish their time in Mexico.\
+You\'re starting to feel a little dehydrated and worn out from all the heat. A couple you met at Cabo Wabo offered you\n\
+their hometown apartment as a place to stay while they finish their time in Mexico.\n\
 
-You could call the airline and change your flight, or take your chances on the next flight that leaves\
+You could call the airline and change your flight, or take your chances on the next flight that leaves\n\
  no matter where it\'s headed.''', {}, 'Salt that rim!')
 
-location3 = Location('Amsterdam', '''Amsterdam!! Somehow it has been two days since you arrived, but you can\'t remember the first one. \
-\
-You find ticket stubs to the Anne Frank House and the Van Gogh Museum in your wallet, so it seems like a good trip so far!\
-It also appears that you have maxed out your credit card, which limits your options to the $78 in cash you have in \
-your wallet. Well, that and your unmatched charm.\
-\
-There is a bus headed South that you can afford, you can take that stranger up on their offer for a place to crash for the night,\
+location3 = Location('Amsterdam', '''Amsterdam!! Somehow it has been two days since you arrived, but you can\'t remember the first one. \n\
+\n\
+You find ticket stubs to the Anne Frank House and the Van Gogh Museum in your wallet, so it seems like a good trip so far!\n\
+It also appears that you have maxed out your credit card, which limits your options to the $78 in cash you have in \n\
+your wallet. Well, that and your unmatched charm.\n\
+\n\
+There is a bus headed South that you can afford, you can take that stranger up on their offer for a place to crash for the night,\n\
 or you can call your Mom and beg for a flight home.''', {}, 'Just act normal and you\'ll be crazy enough.')
 
-location4 = Location('Paris', '''Paris! You\'ve managed to squeeze in a trip the Louvre,\
-the Eiffel Tower, and Notre Dame. But, you\'ve also had your fill of wine and cheese and are ready to head to your\
-next destination.\
+location4 = Location('Paris', '''Paris! You\'ve managed to squeeze in a trip the Louvre,\n\
+the Eiffel Tower, and Notre Dame. But, you\'ve also had your fill of wine and cheese and are ready to head to your\n\
+next destination.\n\
 \
-You get a killer flight deal alert on your phone, but can\'t see where to.\
-You\'ve also been dying to take the Chunnel (underwater train) to London.\
+You get a killer flight deal alert on your phone, but can\'t see where to.\n\
+You\'ve also been dying to take the Chunnel (underwater train) to London.\n\
 You\'re also tempted to join some new friends from the hostel on a ski trip to Switzerland.''', {}, 'Bonjour!')
 
-location5 = Location('London', '''London would probably be more fun if your wallet and passport hadn\'t been stolen on the tube! Lucky for you,\
-you charmed the pants off the security guard at Big Ben. Who could have known it was the Queen\'s third cousin?
-\
-Maybe if you\'re lucky she can help you get back some identification and funding and send you on to your next desination!\
+location5 = Location('London', '''London would probably be more fun if your wallet and passport hadn\'t been stolen on the tube! Lucky for you,\n\
+you charmed the pants off the security guard at Big Ben. Who could have known it was the Queen\'s third cousin? \n\
+Maybe if you\'re lucky she can help you get back some identification and funding and send you on to your next desination!\n\
 Do you want to meet the Queen, or take your chances with the embassy?''', {}, 'What a brilliant holiday!')
 
-location6 = Location('Switzerland', '''Switzerland! What an incredible three days of skiing in the Swiss Alps! It snowed every day making the powder something you\'d\
-only ever dreamed about! Unfortunately, all that snow has closed down most transportation options and it looks like you\'re\
-either going to have to go back the way you came or hitch a ride with that ski racing team on their bus.''', {}, 'Gruetzi!')
+location6 = Location('Switzerland', '''Switzerland! What an incredible three days of skiing in the Swiss Alps! It snowed every \n\
+day making the powder something you\'d only ever dreamed about! Unfortunately, all that snow has closed down most transportation \n\
+options and it looks like you\'re either going to have to go back the way you came or hitch a ride with that ski racing team \n\
+on their bus.''', {}, 'Gruetzi!')
 
-location7 = Location('Vegas', '''Vegas baby! You\'ve now been awake for three days straight! \
-You got married by Elvis, then had it anulled a few hours later. You\'ve been a special guest on\
-three separate bachelorette party buses, and you\'re seriously considering a career change to the Cirque du Soleil.\
-\
-You\'re about out of money, but can\'t resist one more roll at the craps table... JACKPOT!\
-Should you take that expensively dressed gentleman up on his offer\
-to discuss a business proposition in his suite? Shoot, you could also just buy a private jet with your winnings\
+location7 = Location('Vegas', '''Vegas baby! You\'ve now been awake for three days straight! \n\
+You got married by Elvis, then had it anulled a few hours later. You\'ve been a special guest on\n\
+three separate bachelorette party buses, and you\'re seriously considering a career change to the Cirque du Soleil.\n\
+\n\
+You\'re about out of money, but can\'t resist one more roll at the craps table... JACKPOT!\n\
+Should you take that expensively dressed gentleman up on his offer\n\
+to discuss a business proposition in his suite? Shoot, you could also just buy a private jet with your winnings\n\
 and fly anywhere you want! ''', {}, 'What happens in Vegas, stays in Vegas!')
 
-location8 = Location('Iceland', '''You\'ve always wondered what Iceland would be like! After viewing some fantastic northern lights in Reykjavik, \
-and a relaxing spa weekend at the Blue Lagoon hot pools, it\'s time for another adventure.\
-\
-You are tempted by that couple\'s offer to join them on their kayak trip in Greenland to look for narwhals, \
-it is your favorite animal after all.\
-You could also leave all this cold weather behind and head for a nice beach somewhere.\
-There\'s also this guilt that\'s been building, maybe you should learn something historical on your next trip?.\
+location8 = Location('Iceland', '''You\'ve always wondered what Iceland would be like! After viewing some fantastic northern lights in Reykjavik, \n\
+and a relaxing spa weekend at the Blue Lagoon hot pools, it\'s time for another adventure.\n\
+\n\
+You are tempted by that couple\'s offer to join them on their kayak trip in Greenland to look for narwhals, \n\
+it is your favorite animal after all.\n\
+You could also leave all this cold weather behind and head for a nice beach somewhere.\n\
+There\'s also this guilt that\'s been building, maybe you should learn something historical on your next trip?.\n\
 Then again, some rowdy American nightlife might be a nice way to mix things up.''', {}, 'On with the butter!')
 
-location9 = Location('Zanzibar', '''Zanzibar! How were you supposed to know talking with that guy would land you here? \
-Accidentally ending up on an island with crystal white beaches isn\'t a bad surprise though.\
-\
-You hop on the ferry to Tanzania, take a quick jog up Kilimanjaro, then finish off with a short \
-safari to the Ngorongoro Crater and the Serengeti. Not a bad trip, but these malaria pills are \
-giving you crazy dreams and you\'re ready to head out.\
-\
-You can take your new friend\'s offer for a flight back to where you started.\
+location9 = Location('Zanzibar', '''Zanzibar! How were you supposed to know talking with that guy would land you here? \n\
+Accidentally ending up on an island with crystal white beaches isn\'t a bad surprise though.\n\
+\n\
+You hop on the ferry to Tanzania, take a quick jog up Kilimanjaro, then finish off with a short \n\
+safari to the Ngorongoro Crater and the Serengeti. Not a bad trip, but these malaria pills are \n\
+giving you crazy dreams and you\'re ready to head out.\n\
+\n\
+You can take your new friend\'s offer for a flight back to where you started.\n\
 Or, you can let the agent at the travel counter pick your next destination for you.''', {}, 'Hakuna Matata')
 
-location10= Location('Greenland', '''Greenland! After a cold, exhausting, and exciting kayak trip you finally see your favorite animal, the narwhal, \
-in real life! Next up is a visit to the viking ruins and the Hvalsey Fjord Church. Then one more stop at the breathtaking\
-Illulissat ice-fjord.\
-\
-All these chilly endeavors are making you long for those sweet Icelandic hot pools though.\
+location10= Location('Greenland', '''Greenland! After a cold, exhausting, and exciting kayak trip you finally see your favorite animal, the narwhal, \n\
+in real life! Next up is a visit to the viking ruins and the Hvalsey Fjord Church. Then one more stop at the breathtaking\n\
+Illulissat ice-fjord.\n\
+\n\
+All these chilly endeavors are making you long for those sweet Icelandic hot pools though.\n\
 One more dip in the springs, or take a chance with your travel app again?''', {}, 'The unicorns of the sea!')
 
-location11 = Location('Egypt', '''Egypt! This has to be the Final Destination on your vacation adventure\
- because you are running dangerously low on funds!\
- \
- But first, you play tourist at the Great Pyramids, the Sphinx, and the Valley of the Kings.\
-\
- You can head to the travel agency to finish your adventure, or, if you are still trying for for First Class status,\
-  you could try to keep going on the cheap and go with this slightly\
+location11 = Location('Egypt', '''Egypt! This has to be the Final Destination on your vacation adventure\n\
+ because you are running dangerously low on funds!\n\
+ \n\
+ But first, you play tourist at the Great Pyramids, the Sphinx, and the Valley of the Kings.\n\
+\n\
+ You can head to the travel agency to finish your adventure, or, if you are still trying for for First Class status,\n\
+  you could try to keep going on the cheap and go with this slightly\n\
   shady looking fellow who is offering to take you to King Tut's tomb for free.''', {}, 'This stamp is a curse!')
 
 location12 = Location('exit', '', {}, '')
@@ -175,10 +175,10 @@ location11.gates = {'Tomb': location7, 'Agency': location12}
 
 player1 = Player('Sarah', location1)
 import random
-print('''Welcome to your Vacation Adventure!\
-Make choices to travel to different destinations and gather passport stamps\
-along the way. You must find the Final Destination to finish the game.\
-Try to avoid getting sent home to Portland to restart your adventure.\
+print('''Welcome to your Vacation Adventure!\n\
+Make choices to travel to different destinations and gather passport stamps\n\
+along the way. You must find the Final Destination to finish the game.\n\
+Try to avoid getting sent home to Portland to restart your adventure.\n\
 Get at least 8 different passport stamps to acheive First Class status for life!''')
 while True:
     player1.engine()
