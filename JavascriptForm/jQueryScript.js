@@ -7,24 +7,26 @@ $('input[type=text]').blur(function () {
 });
 
 $('#submit').click(function () {
-    event.preventDefault();
+        event.preventDefault();
 
-    var firstname = $("#firstname").val()
-    var lastname = $("#lastname").val()
+        var firstname = $("#firstname").val()
+        var lastname = $("#lastname").val()
 
-    if (firstname > 0) {
-        $("#firstname").html("");
-    } else {
-        $("#firstNameError").html("This field cannot be blank.").css("color", "red");
-
-        if (lastname > 0) {
+        if (firstname.length > 0) {
+            $("#firstNameError").html("");
+        } else {
+            $("#firstNameError").html("This field cannot be blank.").css("color", "red");
+        }
+        ;
+        if (lastname.length > 0) {
             $("#lastname").html("");
         } else {
             $("#lastNameError").html("This field cannot be blank.").css("color", "red");
         }
+        ;
     }
-
-});
+)
+;
 
 $('#email').keyup(function () {
     var email = $('#email').val();
