@@ -1,0 +1,59 @@
+
+@import url(http://fonts.googleapis.com/css?family=Bowlby+One+SC|Maven+Pro&v2);
+
+body {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+border: 4px  double black;
+    border-radius: 20%;
+background-color: #B6DEC7}
+
+#text {
+text-align: center;}
+
+#sub {
+    padding: 5px;
+    margin: 10px;
+}
+h2 {
+font-family: 'Bowlby One SC', serif;
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+text-transform: none;
+text-decoration: none;
+letter-spacing: 0em;
+word-spacing: 0em;
+line-height: 1.4;
+}
+
+
+#quote {
+font-family: 'Maven Pro', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 2em;
+text-transform: none;
+text-decoration: none;
+letter-spacing: 0.025em;
+word-spacing: 0em;
+line-height: 1.4;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: aliceblue;
+}
+
+#sub{
+font-family: 'Maven Pro', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+text-transform: none;
+text-decoration: none;
+letter-spacing: 0.025em;
+word-spacing: 0em;
+line-height: 1.4;
+    background-color: #D1BD64;
+}
+
