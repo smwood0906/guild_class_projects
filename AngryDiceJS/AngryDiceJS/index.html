@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Angry Dice</title>
+<body>
+<div class='content'>
+    <div>
+        <h1>Angry Dice</h1></div>
+    <span id="turn"> Turn </span><br>
+    <br>
+    <div>Phase <span id='phase'>1</span></div>
+    <div id="nameInput">
+        <input type='text' id='players' placeholder='Player 1 Name'>
+        <button id='sub'>Enter</button>
+    </div>
+    <div>
+        <button id='roll'>Roll</button>
+        <button id='reset'>Reset</button>
+    </div>
+    <div id='chatterBox'></div>
+    <div class='diceHolder'>
+        <div class='inline' id='dice1'><br>
+          </div>
+        <button class= 'inline' id='hold1'>Hold</button>
+
+        <div class='inline' id='dice2'><br>
+           </div>
+        <button class='inline' id='hold2'>Hold</button>
+
+    </div>
+    <div id='heldDice'></div>
+</div>
+</body>
+<script src="script.js"></script>
