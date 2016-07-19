@@ -9,29 +9,35 @@
 <div class='content'>
     <div>
         <h1>Angry Dice</h1></div>
-    <span id="turn"> Turn </span><br>
-    <br>
-    <div>Phase <span id='phase'>1</span></div>
-    <div id="nameInput">
-        <input type='text' id='players' placeholder='Player 1 Name'>
-        <button id='sub'>Enter</button>
-    </div>
+
+    <div id="phaseContainer">Phase <span id='phase'></span></div>
+    <!--<div id="nameInput">-->
+    <!--<input type='text' id='players' placeholder='Player 1 Name'>-->
+    <!--<button id='sub'>Enter</button>-->
+    <!--</div>-->
     <div>
         <button id='roll'>Roll</button>
         <button id='reset'>Reset</button>
     </div>
     <div id='chatterBox'></div>
-    <div class='diceHolder'>
-        <div class='inline' id='dice1'><br>
-          </div>
-        <button class= 'inline' id='hold1'>Hold</button>
+    <div id="container">
+        <div class='diceHolder'>
+            <div class='inline' id='dice1'><br></div>
+            <div class='inline' id='dice2'><br>
+            </div>
+            <div class='buttonHolder'>
+                <div class="alignButton">
+                    <button class="button" id='hold1'>Hold</button>
+                </div>
 
-        <div class='inline' id='dice2'><br>
-           </div>
-        <button class='inline' id='hold2'>Hold</button>
-
+                <div class="alignButton">
+                <button class="button" id='hold2'>Hold</button>
+            </div>
+            </div>
+        </div>
     </div>
-    <div id='heldDice'></div>
 </div>
+<div id='message'></div>
+
 </body>
 <script src="script.js"></script>

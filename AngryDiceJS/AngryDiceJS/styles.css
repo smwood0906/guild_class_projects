@@ -1,3 +1,22 @@
+.diceHolder{
+    display: inline-block;
+    text-align: center;
+
+}
 .inline{
-    display: inline-block
+    display: inline-block;
+}
+.alignButton{
+    display: inline-block;
+    width: 94px;
+    text-align: center;
+
+}
+.border{
+    display: inline-block;
+    border: solid darkred 3px;
+}
+
+.content{
+    text-align: center;
 }
