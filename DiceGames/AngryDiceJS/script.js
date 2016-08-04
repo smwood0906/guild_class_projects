@@ -1,5 +1,5 @@
 /**
- * Created by adamtwood on 7/12/2016.
+ This project is to recreate the AngryDice Game that I originally created in Python. Completed during Week 8 of Bootcamp.
  */
 $("#phase").html(" 1");
 var phase = 1;
